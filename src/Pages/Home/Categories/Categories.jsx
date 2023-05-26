@@ -1,0 +1,40 @@
+import { useEffect, useState } from "react";
+
+
+import { Link } from "react-router-dom";
+
+const Categories = () => {
+    const [categories, setCategories] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/categories')
+            .then(res => res.json())
+            .then(data => setCategories(data))
+            .catch(error => console.error(error))
+    }, [])
+
+
+    return (
+        <div className="mb-10">
+           
+            <div>
+            <div>
+            {
+                categories.map(category => <p className="text-3xl my-5 text-white"
+                key={category.id
+
+                }>
+                   <Link to={`/category/${category.id}`}>{category.name}</Link>
+
+                </p> )
+
+            }
+            </div>
+           
+           
+            </div>
+
+        </div>
+    );
+};
+
+export default Categories;

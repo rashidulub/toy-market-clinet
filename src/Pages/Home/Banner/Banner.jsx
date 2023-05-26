@@ -10,10 +10,10 @@ import slider6 from '../../../assets/home/slide6.png'
 const Banner = () => {
     return (
         <div>
-            <div >
-            <Carousel className='text-center '>
+            <div  >
+            <Carousel className='text-center'>
                 <div>
-                    <img src={slider1} />
+                    <img   src={slider1} />
                     <p  className="legend">Supper Car</p>
                 </div>
                 <div>
@@ -36,6 +36,7 @@ const Banner = () => {
                     <img src={slider6} />
                     <p className="legend">Fire Car</p>
                 </div>
+               
             </Carousel>
            
             </div>
