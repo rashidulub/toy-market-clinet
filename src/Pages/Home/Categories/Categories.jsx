@@ -22,7 +22,7 @@ const Categories = () => {
         <div className='text-center mb-7 '>
             <h1 className='text-6xl text-orange-500 md:w-4/12 mx-auto uppercase border-b-4 py-4 border-indigo-500 font-bold my-10'>Category</h1>
             <Tabs>
-                <div className='mb-5 text-white font-bold'>
+                <div className='mb-5 text-2xl text-white font-bold'>
                     <TabList >
                         <Tab>Action Car</Tab>
                         <Tab>Sports Car</Tab>
