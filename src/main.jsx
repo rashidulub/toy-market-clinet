@@ -11,12 +11,14 @@ import Authprovider from './provider/Authprovider';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <HelmetProvider>
    <Authprovider>
-   <HelmetProvider>
+   
    <div className='max-w-screen-xl mx-auto'>
    <RouterProvider router={router} />
    </div>
-   </HelmetProvider>
+   
    </Authprovider>
+   </HelmetProvider>
   </React.StrictMode>,
 )

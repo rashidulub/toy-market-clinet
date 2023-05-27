@@ -3,8 +3,10 @@ import { useContext } from 'react';
 import img from '../../assets/home/slide4.png'
 import { AuthContext } from '../../provider/Authprovider';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const SignUp = () => {
+    
 
     const { createUser } = useContext(AuthContext);
 
@@ -26,7 +28,11 @@ const SignUp = () => {
     }
 
     return (
+        
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                <title>SEGREX / SignUp</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row">
                 <div className="w-1/2 mr-12 rounded-full">
                     <img className='rounded-full' src={img} alt="" />
