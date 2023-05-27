@@ -2,7 +2,7 @@ import learn1 from '../../assets/home/cardoctor.png'
 const LearnSec = () => {
     return (
         <div>
-            <div className="mx-auto text-center md:w-4/12 my-8">
+            <div className="mx-auto text-center my-20 md:w-4/12 ">
                 <p className="text-yellow-600 font-bold mb-2">---Check it Out---</p>
                 <h3 className="text-3xl uppercase border-y-4 py-4">Featured Item</h3>
             </div>

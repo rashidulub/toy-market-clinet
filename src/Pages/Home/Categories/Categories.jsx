@@ -1,37 +1,61 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import ActionCar from '../../ActionCar/ActionCar';
+import SportsCar from '../../SportsCar/SportsCar';
+import SupperCar from '../SupperCar/SupperCar';
 
-import { Link } from "react-router-dom";
 
 const Categories = () => {
-    const [categories, setCategories] = useState([]);
+    const [Categories, setCategories] = useState([])
+
     useEffect(() => {
         fetch('http://localhost:5000/categories')
             .then(res => res.json())
             .then(data => setCategories(data))
             .catch(error => console.error(error))
+
     }, [])
 
-
     return (
-        <div className="mb-10">
-           
-            <div>
-            <div>
-            {
-                categories.map(category => <p className="text-3xl my-5 text-white"
-                key={category.id
+        <div className='text-center mb-7 '>
+            <h1 className='text-6xl text-orange-500 md:w-4/12 mx-auto uppercase border-b-4 py-4 border-indigo-500 font-bold my-10'>Category</h1>
+            <Tabs>
+                <div className='mb-5 text-white font-bold'>
+                    <TabList >
+                        <Tab>Action Car</Tab>
+                        <Tab>Sports Car</Tab>
+                        <Tab>Supper Car</Tab>
+                    </TabList>
+                </div>
 
-                }>
-                   <Link to={`/category/${category.id}`}>{category.name}</Link>
+                <TabPanel>
+                    {
+                        Categories.map(category => <ActionCar
+                            key={category.id}
+                            category={category}
+                        ></ActionCar>)
+                    }
 
-                </p> )
-
-            }
-            </div>
-           
-           
-            </div>
+                </TabPanel>
+                <TabPanel>
+                    {
+                        Categories.map(category => <SportsCar
+                            key={category.id}
+                            category={category}
+                        ></SportsCar>)
+                    }
+                </TabPanel>
+                <TabPanel>
+                {
+                        Categories.map(category => <SupperCar
+                        key={category.id}
+                        category={category}
+                        ></SupperCar>)
+                    }
+                </TabPanel>
+            </Tabs>
 
         </div>
     );
