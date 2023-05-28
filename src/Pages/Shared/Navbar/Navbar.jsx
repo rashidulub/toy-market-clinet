@@ -4,6 +4,7 @@ import navlogo from '../../../assets/home/navlogo.jpg'
 const NavItem =<>  
 <li><Link to='/'>Home</Link></li>
 <li ><Link to='/alltoys'>All Toys</Link></li>
+<li ><Link to='/mytoy'>My Toys</Link></li>
 <li ><Link to='/addtoy'>Add Toy</Link></li>
 <li><Link to='/login'>Login</Link></li>
 
