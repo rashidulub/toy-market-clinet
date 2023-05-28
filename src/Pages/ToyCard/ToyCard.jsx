@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 
-const ToyCard = ({ toy }) => {
+const ToyCard = ({ toy ,toys, setToys}) => {
     const {_id, name, photo, price, category } = toy
     const handleDelete = _id => {
         console.log(_id);
@@ -30,6 +31,9 @@ const ToyCard = ({ toy }) => {
                                 'Your Toy has been deleted.',
                                 'success'
                             )
+                            
+                            const remaining = toys.filter(toye => toye._id !== _id);
+                            setToys(remaining)
                             
                         }
                     })
@@ -73,7 +77,8 @@ const ToyCard = ({ toy }) => {
                         </td>
                         <td>     Price-${price}</td>
                         <th>
-                            <button className="btn btn-warning">Update</button>
+                        <Link to={`/updatetoy/${_id}`}
+                ><button className="btn btn-primary">Update</button></Link>
                         </th>
                         <th> 
                             <button 
