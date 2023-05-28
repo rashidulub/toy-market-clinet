@@ -6,7 +6,7 @@ const UseMenu = ()=>{
     const [loading,setLoading ] = useState(true)
 
     useEffect(() => {
-        fetch('http://localhost:5000/categories')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => {
                 setCategories(data)
