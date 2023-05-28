@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/home/slide5.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/Authprovider';
@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet-async';
 const Login = () => {
    
     const navigate = useNavigate()
+    const location = useLocation();
 
     const { signIn } = useContext(AuthContext);
     const from = location.state?.from?.pathname || '/'
@@ -16,7 +17,7 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, email, password)
+        console.log( email, password)
         signIn(email, password)
             .then(result => {
                 const user = result.user;
