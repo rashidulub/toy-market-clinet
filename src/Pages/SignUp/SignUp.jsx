@@ -2,10 +2,11 @@
 import { useContext } from 'react';
 import img from '../../assets/home/slide4.png'
 import { AuthContext } from '../../provider/Authprovider';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 const SignUp = () => {
+    const navigate = useNavigate()
     
 
     const { createUser } = useContext(AuthContext);
@@ -22,6 +23,7 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                navigate('/')
             })
             .catch(error => console.log(error))
 
