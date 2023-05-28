@@ -1,9 +1,10 @@
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
+import { Link } from "react-router-dom";
 
 
 const TabCategory = ({item}) => {
-    const {name,image,price,rating} =item
+    const {name,image,price,rating , _id} =item
     return (
         <div className="card card-compact w-96 bg-base-100 mb-10 shadow-xl">
         <figure><img src={image} alt="Shoes" /></figure>
@@ -20,7 +21,8 @@ const TabCategory = ({item}) => {
             ></Rating>
             
             <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Details</button>
+                <Link to={`/details/${_id}`}
+                ><button className="btn btn-primary">View Details</button></Link>
             </div>
         </div>
     </div>

@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const AllToyTable = ({item}) => {
-    const {name,image,price,category} =item
+    const {_id,name,image,price,category} =item
     return (
         
          <div className="overflow-x-auto w-full text-white ">
@@ -39,7 +40,8 @@ const AllToyTable = ({item}) => {
                         </td>
                         <td>     Price-${price}</td>
                         <th>
-                        <button className="btn btn-success">details</button>
+                        <Link to={`/details/${_id}`}
+                ><button className="btn btn-primary">View Details</button></Link>
                         </th>
                     </tr>
                     {/* row 2 */}
