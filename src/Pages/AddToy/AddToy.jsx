@@ -44,7 +44,7 @@ const AddToy = () => {
     };
 
     return (
-        <div className="bg-[#3b300c] my-14 p-24">
+        <div className="bg-[#72bdff] my-14 p-24">
             <Helmet>
                 <title>SEGREX / Add-Toy</title>
             </Helmet>
@@ -54,7 +54,7 @@ const AddToy = () => {
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text">Toy Name</span>
+                            <span className="label-tex text-black">Toy Name</span>
                         </label>
                         <label className="input-group">
                             <input type="text" name="name" placeholder="Toy Name" className="input input-bordered w-full" />
@@ -62,7 +62,7 @@ const AddToy = () => {
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
-                            <span className="label-text">Price</span>
+                            <span className="label-text text-black">Price</span>
                         </label>
                         <label className="input-group">
                             <input type="text" name="price" placeholder="Price" className="input input-bordered w-full" />
@@ -73,7 +73,7 @@ const AddToy = () => {
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text">Category Name</span>
+                            <span className="label-text text-black">Category Name</span>
                         </label>
                         <label className="input-group">
                             <input type="text" name="category" placeholder="Category Name" className="input input-bordered w-full" />
@@ -81,7 +81,7 @@ const AddToy = () => {
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
-                            <span className="label-text">Details</span>
+                            <span className="label-text text-black">Details</span>
                         </label>
                         <label className="input-group">
                             <input type="text" name="details" placeholder="Details" className="input input-bordered w-full" />
@@ -94,7 +94,7 @@ const AddToy = () => {
                 <div className="mb-8">
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Photo URL</span>
+                            <span className="label-text text-black">Photo URL</span>
                         </label>
                         <label className="input-group">
                             <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered w-full" />

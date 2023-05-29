@@ -66,16 +66,16 @@ const ToyCard = ({ toy ,toys, setToys}) => {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="font-bold items-start ms-0">Name : {name}</div>
+                                    <div className="font-bold text-black items-start ms-0">Name : {name}</div>
 
                                 </div>
                             </div>
                         </td>
-                        <td className="items-start">
+                        <td className="items-start text-black">
 
                             <h1>Category: {category}</h1>
                         </td>
-                        <td>     Price-${price}</td>
+                        <td className="text-black">     Price-${price}</td>
                         <th>
                         <Link to={`/updatetoy/${_id}`}
                 ><button className="btn btn-primary">Update</button></Link>
