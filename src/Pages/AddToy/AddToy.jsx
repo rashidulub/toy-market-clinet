@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2'
 
 const AddToy = () => {
@@ -44,6 +45,9 @@ const AddToy = () => {
 
     return (
         <div className="bg-[#3b300c] my-14 p-24">
+            <Helmet>
+                <title>SEGREX / Add-Toy</title>
+            </Helmet>
             <h2 className="text-3xl text-white font-extrabold">Add a toy</h2>
             <form onSubmit={handleAddCoffee} >
                 {/* form name and quantity row */}

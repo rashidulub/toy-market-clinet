@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -47,6 +48,9 @@ const UpdateToy = () => {
     const { _id,name, photo, price, category ,details} = toy
     return (
         <div className="bg-[#3b300c] my-14 p-24">
+            <Helmet>
+                <title>SEGREX / Update-toy</title>
+            </Helmet>
             <h2 className="text-3xl text-white font-extrabold">Update toy-- {name}</h2>
             <form onSubmit={handleUpdateToy} >
                 {/* form name and quantity row */}

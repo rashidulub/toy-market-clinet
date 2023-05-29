@@ -1,10 +1,14 @@
 
+import { Helmet } from 'react-helmet-async';
 import { Link, useRouteError } from 'react-router-dom'
 
 const ErrorPage = () => {
   const { error, status } = useRouteError()
   return (
     <section className='flex items-center h-screen p-16 bg-gray-100 text-gray-900'>
+        <Helmet>
+                <title>SEGREX / Error-Page</title>
+            </Helmet>
       <div className='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
         <svg
           xmlns='http://www.w3.org/2000/svg'

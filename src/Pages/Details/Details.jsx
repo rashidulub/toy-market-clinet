@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 
 const Details = () => {
@@ -5,6 +6,9 @@ const Details = () => {
     const {name,image,category,details,price}= detail
     return (
         <div className="card card-compact w-full mt-5 bg-base-100 mb-10 shadow-xl">
+            <Helmet>
+                <title>SEGREX / Details</title>
+            </Helmet>
         <figure><img src={image} alt="Shoes" /></figure>
         <div className="card-body">
             <h2 className="card-title text-3xl text-white">Name: {name}</h2>
