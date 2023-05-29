@@ -34,8 +34,8 @@ const Navbar = () => {
           <img className="w-12 rounded-full mr-0" src={navlogo} alt="" />
           <a className="btn btn-ghost normal-case text-xl">SEGREX</a>
         </div>
-        <div className="navbar-center text-black hidden lg:flex">
-          <ul className="menu menu-horizontal text-black px-1">
+        <div className="navbar-center  hidden lg:flex">
+          <ul className="menu menu-horizontal  px-1">
             <Link className="mr-5" to='/'>Home</Link>
             <Link className="mr-5" to='/alltoys'>All Toys</Link>
          
