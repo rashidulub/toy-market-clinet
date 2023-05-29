@@ -3,8 +3,23 @@ import img from '../../assets/home/slide5.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/Authprovider';
 import { Helmet } from 'react-helmet-async';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import app from '../../firebase/firebase.config';
+import { FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
+    const auth = getAuth(app)
+    const provider = new GoogleAuthProvider();
+
+    const handleGoogleSignIN =()=>{
+        signInWithPopup(auth,provider)
+        .then(result=>{
+            const user = result.user;
+            console.log(user);
+            navigate(from , {replace: true})
+        })
+        .catch(error=>console.log(error))
+    }
    
     const navigate = useNavigate()
     const location = useLocation();
@@ -56,6 +71,10 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <input className="btn btn-primary" type="submit" value="Login" />
                             </div>
+                            <div className='text-center'>
+                            <button onClick={handleGoogleSignIN} className="btn my-2  btn-outline btn-warning"><FaGoogle className='mr-3' />  Login with Google</button>
+                            </div>
+                            
                         </form>
                         <p className='my-4 text-center'>New to Toy Market Place <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
                     </div>
