@@ -19,7 +19,7 @@ const ToyCard = ({ toy ,toys, setToys}) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/addtoy/${_id}`, {
+                fetch(`https://toy-market-place-server-xi.vercel.app/addtoy/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

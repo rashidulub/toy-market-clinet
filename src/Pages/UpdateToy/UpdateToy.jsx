@@ -22,7 +22,7 @@ const UpdateToy = () => {
         console.log(Updatetoy);
 
         // send data to the server
-        fetch(`http://localhost:5000/addtoy/${_id}`, {
+        fetch(`https://toy-market-place-server-xi.vercel.app/addtoy/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

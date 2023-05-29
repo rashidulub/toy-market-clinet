@@ -8,7 +8,7 @@ const AllToys = () => {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://toy-market-place-server-xi.vercel.app/services')
             .then(res => res.json())
             .then(data => {
                 setCategories(data)
