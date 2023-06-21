@@ -5,7 +5,7 @@ import { AuthContext } from '../../provider/Authprovider';
 import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const SignUp = () => {
+const SignUp = () => 
     const navigate = useNavigate()
     
 
